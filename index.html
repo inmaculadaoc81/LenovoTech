@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>LenovoTech ThinkCentre | Reparación de ordenadores Lenovo en Madrid</title>
 <meta name="description" content="¿Tu ordenador Lenovo no funciona y te preocupa cuánto tardarás en recuperarlo o qué pasará con tus archivos? Diagnóstico gratuito, reparación Lenovo en Madrid, recogida y cita online.">
-<link rel="icon" href="/assets/favicon.jpg">
+<link rel="icon" href="/assets/ico-servico-tecnico-reparacion-ordenador-portatil-laptop-pc-lenovo-madrid.jpg">
 <link rel="canonical" href="https://thinkcentre.es/">
 <meta name="robots" content="index,follow">
 <meta property="og:title" content="LenovoTech ThinkCentre | Reparación Lenovo en Madrid">
@@ -137,16 +137,40 @@ footer{background:#111;color:#fff;padding:34px 0}
 .footer img{height:34px}
 .footer a{color:#fff}
 
-.float-wa{position:fixed;right:22px;bottom:22px;z-index:10020;width:64px;height:64px;border-radius:50%;background:var(--green);display:grid;place-items:center;box-shadow:0 12px 28px rgba(0,0,0,.24);text-decoration:none}
-.float-wa svg{width:34px;height:34px;fill:#fff}
-.bot-toggle{position:fixed;right:22px;bottom:98px;z-index:10060;width:64px;height:64px;border:0;border-radius:50%;background:#111;color:#fff;display:grid;place-items:center;box-shadow:0 12px 28px rgba(0,0,0,.24);cursor:pointer;font-size:25px}
-.bot-window{position:fixed;right:22px;bottom:178px;z-index:10100;width:min(390px,calc(100vw - 28px));height:480px;background:#fff;border:1px solid #ddd;border-radius:22px;box-shadow:0 20px 70px rgba(0,0,0,.25);display:none;overflow:hidden}
+.float-wa{position:fixed;right:22px;bottom:22px;z-index:10020;width:64px;height:64px;border-radius:50%;background:var(--green);display:grid;place-items:center;box-shadow:0 12px 28px rgba(32,201,107,.35);text-decoration:none;transition:transform .18s ease,box-shadow .18s ease}
+.float-wa:hover{transform:translateY(-3px) scale(1.05);box-shadow:0 16px 34px rgba(32,201,107,.45)}
+.float-wa svg{width:32px;height:32px;fill:#fff}
+
+.bot-toggle{position:relative;position:fixed;right:22px;bottom:98px;z-index:10060;width:64px;height:64px;border:0;border-radius:50%;background:#111;color:#fff;display:grid;place-items:center;box-shadow:0 12px 28px rgba(0,0,0,.24);cursor:pointer;transition:transform .18s ease,box-shadow .18s ease}
+.bot-toggle:hover{transform:translateY(-3px) scale(1.05);box-shadow:0 16px 34px rgba(0,0,0,.3)}
+.bot-toggle-icon{display:grid;place-items:center;transition:transform .2s ease}
+.bot-toggle-icon svg{width:28px;height:28px;fill:#fff}
+.bot-toggle.open .bot-toggle-icon{transform:rotate(90deg)}
+.bot-ping{position:absolute;top:8px;right:8px;width:13px;height:13px;border-radius:50%;background:var(--red);border:2px solid #111;animation:botPing 1.8s ease-in-out infinite}
+.bot-toggle.open .bot-ping{display:none}
+@keyframes botPing{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.3);opacity:.55}}
+
+.bot-window{position:fixed;right:22px;bottom:178px;z-index:10100;width:min(390px,calc(100vw - 28px));height:520px;background:#fff;border:1px solid #ddd;border-radius:22px;box-shadow:0 20px 70px rgba(0,0,0,.25);display:none;overflow:hidden}
 .bot-window.open{display:flex;flex-direction:column}
-.bot-head{background:#111;color:#fff;padding:18px 20px}
-.bot-head b{display:block;font-size:20px}.bot-head small{color:#ccc}
-.bot-body{padding:18px;flex:1;background:#f5f5f5}
-.bot-msg{background:#fff;padding:13px;border-radius:12px}
-.bot-foot{border-top:1px solid #ddd;padding:12px;background:#fff;font-size:13px;color:#666}
+.bot-head{background:#111;color:#fff;padding:16px 20px;display:flex;align-items:center;gap:12px}
+.bot-head-avatar{width:38px;height:38px;border-radius:50%;background:var(--red);display:grid;place-items:center;flex:0 0 auto}
+.bot-head-avatar svg{width:20px;height:20px;fill:#fff}
+.bot-head b{display:block;font-size:17px}
+.bot-head small{color:#ccc;display:flex;align-items:center;gap:6px;font-size:12px}
+.bot-status-dot{width:8px;height:8px;border-radius:50%;background:var(--green);display:inline-block}
+.bot-body{padding:18px;flex:1;background:#f5f5f5;overflow-y:auto;display:flex;flex-direction:column;gap:10px}
+.bot-msg{max-width:82%;padding:12px 14px;border-radius:14px;font-size:14px;line-height:1.4;white-space:pre-line}
+.bot-msg-bot{background:#fff;border:1px solid #e5e5e5;border-bottom-left-radius:4px;align-self:flex-start;color:#111}
+.bot-msg-user{background:var(--red);color:#fff;border-bottom-right-radius:4px;align-self:flex-end}
+.bot-typing{align-self:flex-start;background:#fff;border:1px solid #e5e5e5;border-radius:14px;border-bottom-left-radius:4px;padding:14px 16px;display:flex;gap:4px}
+.bot-typing span{width:6px;height:6px;border-radius:50%;background:#999;animation:botTyping 1s infinite}
+.bot-typing span:nth-child(2){animation-delay:.15s}
+.bot-typing span:nth-child(3){animation-delay:.3s}
+@keyframes botTyping{0%,60%,100%{transform:translateY(0);opacity:.5}30%{transform:translateY(-4px);opacity:1}}
+.bot-input{border-top:1px solid #ddd;padding:12px;background:#fff;display:flex;gap:8px}
+.bot-input input{flex:1;border:1px solid #cfcfcf;border-radius:999px;padding:11px 16px;font:inherit}
+.bot-input button{border:0;background:var(--red);color:#fff;width:42px;height:42px;border-radius:50%;display:grid;place-items:center;cursor:pointer;flex:0 0 auto}
+.bot-input button svg{width:18px;height:18px;fill:#fff}
 
 @media(max-width:900px){
  nav{display:none}.menu-btn{display:block}
@@ -177,7 +201,7 @@ footer{background:#111;color:#fff;padding:34px 0}
 
 <header>
   <div class="wrap nav">
-    <a href="#inicio"><img class="logo" src="/assets/logo-thinkcentre.jpg" alt="ThinkCentre LenovoTech"></a>
+    <a href="#inicio"><img class="logo" src="/assets/logo-servico-tecnico-reparacion-ordenador-portatil-laptop-pc-lenovo-madrid.jpg" alt="ThinkCentre LenovoTech"></a>
     <nav>
       <a href="#problemas">Qué le pasa</a>
       <a href="#datos">Tus datos</a>
@@ -363,27 +387,123 @@ footer{background:#111;color:#fff;padding:34px 0}
 
 <footer>
  <div class="wrap footer">
-  <img src="/assets/logo-thinkcentre.jpg" alt="ThinkCentre">
+  <img src="/assets/logo-servico-tecnico-reparacion-ordenador-portatil-laptop-pc-lenovo-madrid.jpg" alt="ThinkCentre">
   <div>LenovoTech | ThinkCentre | Servicio Técnico Lenovo · Madrid</div>
   <a href="https://maps.app.goo.gl/jhFVft6AcvbF5AAf7" target="_blank" rel="noopener">Ubicación y reseñas</a>
  </div>
 </footer>
 
 <a class="float-wa" href="https://api.whatsapp.com/send?phone=34649970128&text=%C2%A1Hola%20Kelatos!" target="_blank" rel="noopener" aria-label="WhatsApp">
-<svg viewBox="0 0 32 32" aria-hidden="true"><path d="M19.11 17.54c-.46-.23-2.73-1.35-3.15-1.5-.42-.15-.73-.23-1.03.23-.31.46-1.19 1.5-1.46 1.81-.27.31-.54.35-1 .12-.46-.23-1.95-.72-3.71-2.29-1.37-1.22-2.3-2.73-2.57-3.19-.27-.46-.03-.71.2-.94.21-.21.46-.54.69-.81.23-.27.31-.46.46-.77.15-.31.08-.58-.04-.81-.12-.23-1.03-2.5-1.42-3.42-.37-.9-.75-.78-1.03-.79h-.88c-.31 0-.81.12-1.23.58-.42.46-1.61 1.58-1.61 3.84 0 2.27 1.65 4.46 1.88 4.77.23.31 3.25 4.96 7.87 6.96 1.1.47 1.96.76 2.63.97 1.1.35 2.11.3 2.9.18.88-.13 2.73-1.12 3.11-2.19.38-1.08.38-2 .27-2.19-.12-.19-.42-.31-.88-.54zM16.04 29h-.01a12.94 12.94 0 0 1-6.59-1.8l-.47-.28-4.9 1.29 1.31-4.78-.31-.49A12.92 12.92 0 0 1 3.08 16C3.08 8.86 8.9 3.05 16.05 3.05A12.95 12.95 0 0 1 29 16c0 7.14-5.81 13-12.96 13z"/></svg>
+<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/></svg>
 </a>
 
-<button class="bot-toggle" id="botToggle" aria-label="Abrir asistente">💬</button>
+<button class="bot-toggle" id="botToggle" aria-label="Abrir asistente" aria-expanded="false">
+  <span class="bot-toggle-icon" aria-hidden="true">
+    <svg viewBox="0 0 16 16"><path d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/></svg>
+  </span>
+  <span class="bot-ping" aria-hidden="true"></span>
+</button>
+
 <div class="bot-window" id="botWindow" aria-label="Asistente virtual">
- <div class="bot-head"><b>LenovoTech</b><small>Asistente virtual</small></div>
- <div class="bot-body"><div class="bot-msg">¡Hola! 👋 Cuéntame qué le ocurre a tu Lenovo y qué información necesitas conservar.</div></div>
- <div class="bot-foot">El asistente visual está preparado para conectar con tu flujo n8n habitual.</div>
+ <div class="bot-head">
+  <div class="bot-head-avatar" aria-hidden="true">
+   <svg viewBox="0 0 16 16"><path d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2"/></svg>
+  </div>
+  <div>
+   <b>LenovoTech</b>
+   <small><span class="bot-status-dot" aria-hidden="true"></span>Asistente virtual · en línea</small>
+  </div>
+ </div>
+ <div class="bot-body" id="botBody">
+  <div class="bot-msg bot-msg-bot">¡Hola! 👋 Cuéntame qué le ocurre a tu Lenovo y qué información necesitas conservar.</div>
+ </div>
+ <form class="bot-input" id="botForm">
+  <input id="botInputText" type="text" placeholder="Escribe tu mensaje…" autocomplete="off" required>
+  <button type="submit" aria-label="Enviar mensaje">
+   <svg viewBox="0 0 16 16"><path d="M15.964.686a.5.5 0 0 0-.65-.65L.767 5.855H.766l-.452.18a.5.5 0 0 0-.082.887l.41.26.001.002 4.995 3.178 3.178 4.995.002.002.26.41a.5.5 0 0 0 .886-.083zm-1.833 1.89L6.637 10.07l-.215-.338a.5.5 0 0 0-.154-.154l-.338-.215 7.494-7.494 1.178-.471z"/></svg>
+  </button>
+ </form>
 </div>
 
 <script>
 const botToggle=document.getElementById('botToggle');
 const botWindow=document.getElementById('botWindow');
-botToggle.addEventListener('click',()=>botWindow.classList.toggle('open'));
+const botBody=document.getElementById('botBody');
+const botForm=document.getElementById('botForm');
+const botInputText=document.getElementById('botInputText');
+
+function toggleBot(){
+ const open=botWindow.classList.toggle('open');
+ botToggle.classList.toggle('open',open);
+ botToggle.setAttribute('aria-expanded',String(open));
+ botToggle.setAttribute('aria-label',open?'Cerrar asistente':'Abrir asistente');
+ if(open) botInputText.focus();
+}
+botToggle.addEventListener('click',toggleBot);
+
+function addBotMsg(text,who){
+ const div=document.createElement('div');
+ div.className='bot-msg '+(who==='user'?'bot-msg-user':'bot-msg-bot');
+ div.textContent=text;
+ botBody.appendChild(div);
+ botBody.scrollTop=botBody.scrollHeight;
+}
+function showTyping(){
+ const t=document.createElement('div');
+ t.className='bot-typing';
+ t.id='botTyping';
+ t.innerHTML='<span></span><span></span><span></span>';
+ botBody.appendChild(t);
+ botBody.scrollTop=botBody.scrollHeight;
+}
+function hideTyping(){
+ const t=document.getElementById('botTyping');
+ if(t) t.remove();
+}
+
+// Cuando tengas el webhook de tu flujo n8n, pégalo aquí: el asistente lo
+// usará automáticamente en lugar de las respuestas rápidas de abajo.
+const N8N_WEBHOOK_URL='';
+
+const QUICK_REPLIES=[
+ {k:/(no enciende|no arranca|no prende|no responde)/,r:'Entiendo, el equipo no enciende. Puede ser la fuente de alimentación, la placa o la batería. Trae el equipo o pide recogida y te confirmamos qué es con el diagnóstico gratuito.'},
+ {k:/(pantalla|negra|no se ve|no hay imagen)/,r:'Si el equipo enciende pero la pantalla se queda negra o falla, puede ser el panel, la gráfica o un cable interno. Lo confirmamos sin compromiso con el diagnóstico gratuito.'},
+ {k:/(bater|no carga|el cargador)/,r:'Los problemas de carga suelen ser la batería, el cargador o el conector. Revisamos los tres en el diagnóstico gratuito.'},
+ {k:/(lento|lenta|bloquea|cuelga|tarda)/,r:'Un equipo lento suele mejorar con una limpieza, más memoria o cambiar a disco SSD. Te decimos qué opción tiene sentido para tu equipo.'},
+ {k:/(moj|liquido|líquido|agua)/,r:'Si se ha mojado, apágalo y no lo enciendas hasta que lo revisemos: así evitamos que el daño vaya a más. Trae el equipo cuanto antes.'},
+ {k:/(dato|archivo|foto|documento|recuper)/,r:'Que el ordenador no encienda no significa que los datos estén perdidos. En el diagnóstico te explicamos las opciones de conservación o recuperación antes de tocar nada.'},
+ {k:/(precio|cuesta|coste|cuanto vale|presupuesto)/,r:'El diagnóstico es gratuito. El presupuesto de la reparación te lo damos después de revisar el equipo, sin compromiso.'},
+ {k:/(cita|reservar|agendar|calendario)/,r:'Puedes reservar una cita de 30 minutos directamente en la sección "Pedir cita" de esta misma página.'},
+ {k:/(recogida|recoger|domicilio|pasan a buscar)/,r:'Sí, recogemos tu equipo sin que tengas que desplazarte. Tienes el botón de recogida en la sección "Recogida".'},
+ {k:/(gracias|vale|ok|perfecto|genial)/,r:'¡De nada! Si necesitas algo más, aquí estoy. También puedes escribirnos por WhatsApp o llamarnos al +34 918 29 06 56.'},
+];
+function getQuickReply(text){
+ const hit=QUICK_REPLIES.find(({k})=>k.test(text.toLowerCase()));
+ if(hit) return hit.r;
+ return 'Gracias por contarlo. Para darte una respuesta concreta lo mejor es que lo revisemos en el diagnóstico gratuito: escríbenos por WhatsApp (+34 649 97 01 28) o rellena el formulario de contacto y te confirmamos los siguientes pasos.';
+}
+async function getBotReply(text){
+ if(N8N_WEBHOOK_URL){
+  try{
+   const r=await fetch(N8N_WEBHOOK_URL,{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({message:text})});
+   const d=await r.json();
+   if(d&&d.reply) return d.reply;
+  }catch(err){console.error('Error en el webhook de n8n:',err);}
+ }
+ return getQuickReply(text);
+}
+botForm.addEventListener('submit',async(e)=>{
+ e.preventDefault();
+ const text=botInputText.value.trim();
+ if(!text) return;
+ addBotMsg(text,'user');
+ botInputText.value='';
+ showTyping();
+ const reply=await getBotReply(text);
+ await new Promise((r)=>setTimeout(r,450));
+ hideTyping();
+ addBotMsg(reply,'bot');
+});
 
 const form=document.getElementById('contact-form');
 const statusEl=document.getElementById('form-status');
