@@ -38,7 +38,10 @@ header{position:sticky;top:0;z-index:9000;background:rgba(255,255,255,.96);backd
 nav{display:flex;align-items:center;gap:26px;font-weight:800;font-size:14px}
 nav a{text-decoration:none}
 nav a:hover{color:var(--red)}
-.phone-pill{background:#111;color:#fff!important;padding:12px 18px;border-radius:999px}
+.phone-pill{background:#111;color:#fff!important;padding:12px 18px;border-radius:999px;white-space:nowrap}
+.seo-content{background:var(--soft)}
+.seo-text{max-width:880px}
+.seo-text p{color:var(--muted);font-size:16px;line-height:1.7;margin:0 0 18px}
 .menu-btn{display:none;border:0;background:#111;color:#fff;border-radius:10px;padding:10px 13px;font-weight:800}
 
 .hero{position:relative;overflow:hidden;padding:74px 0 72px;background:
@@ -50,7 +53,7 @@ nav a:hover{color:var(--red)}
 .hero-grid{display:grid;grid-template-columns:1.18fr .82fr;gap:58px;align-items:start;position:relative;z-index:1}
 .eyebrow{display:inline-flex;align-items:center;gap:9px;color:var(--red);font-size:12px;font-weight:950;letter-spacing:2px;text-transform:uppercase;margin-bottom:18px}
 .eyebrow:before{content:"";width:30px;height:4px;background:var(--red)}
-h1{font-size:clamp(42px,5vw,68px);line-height:.98;letter-spacing:-3px;margin:0 0 25px;max-width:790px}
+h1{font-size:clamp(46px,5.6vw,74px);line-height:1.03;letter-spacing:-2.4px;margin:0 0 25px;max-width:790px}
 .accent{color:var(--red)}
 .free{display:inline-flex;align-items:center;gap:12px;margin:8px 0 27px;border:1px solid #f1b6b2;background:#fff6f5;padding:13px 17px;border-radius:14px;font-weight:900}
 .free b{color:var(--red)}
@@ -156,7 +159,7 @@ footer{background:#111;color:#fff;padding:34px 0}
  .hero{padding-top:45px}
  .problem-grid,.steps-grid,.ctas,form{grid-template-columns:1fr}
  .cta.phone,.full{grid-column:auto}
- h1{font-size:43px}
+ h1{font-size:48px}
  .info{padding:22px}
  .calendar-wrap{width:100%;overflow:hidden}
  .cal-frame{height:760px}
@@ -175,13 +178,14 @@ footer{background:#111;color:#fff;padding:34px 0}
       <a href="#datos">Tus datos</a>
       <a href="#recogida">Recogida</a>
       <a href="#cita">Pedir cita</a>
+      <a href="#guia">Guía</a>
       <a href="#contacto">Contacto</a>
-      <a class="phone-pill" href="tel:+34918290656">Atención Telefónica 24 horas 365 días</a>
+      <a class="phone-pill" href="tel:+34918290656">+34 918 29 06 56</a>
     </nav>
     <button class="menu-btn" onclick="document.getElementById('mobileMenu').hidden=!document.getElementById('mobileMenu').hidden">Menú</button>
   </div>
   <div id="mobileMenu" hidden style="padding:0 20px 18px;background:#fff">
-    <a href="#problemas">Qué le pasa</a> · <a href="#datos">Tus datos</a> · <a href="#recogida">Recogida</a> · <a href="#cita">Pedir cita</a> · <a href="#contacto">Contacto</a>
+    <a href="#problemas">Qué le pasa</a> · <a href="#datos">Tus datos</a> · <a href="#recogida">Recogida</a> · <a href="#cita">Pedir cita</a> · <a href="#guia">Guía</a> · <a href="#contacto">Contacto</a>
   </div>
 </header>
 
@@ -190,7 +194,7 @@ footer{background:#111;color:#fff;padding:34px 0}
  <div class="wrap hero-grid">
   <div>
     <div class="eyebrow">Cuando tu Lenovo deja de funcionar, lo urgente no es saber qué pieza es</div>
-    <h1>Tu Lenovo no funciona. Ahora quieres saber <span class="accent">cuándo volverás a tenerlo</span> y qué pasará con todo lo que tienes dentro.</h1>
+    <h1>Tu Lenovo no funciona. <span class="accent">Nosotros nos encargamos de repararlo.</span></h1>
     <div class="free"><span>✓</span><div><b>Diagnóstico gratuito</b><br><small>Revisamos el equipo para entender qué ocurre antes de decidir la reparación.</small></div></div>
     <div class="ctas">
       <a class="cta whatsapp" href="https://api.whatsapp.com/send?phone=34649970128&text=%C2%A1Hola%20Kelatos!" target="_blank" rel="noopener">WhatsApp | Atención 24 horas 365 días | +34 649 97 01 28</a>
@@ -316,6 +320,17 @@ footer{background:#111;color:#fff;padding:34px 0}
  </div>
 </section>
 
+<section class="seo-content" id="guia">
+ <div class="wrap">
+  <div class="section-head"><div class="kicker">Guía</div><h2 class="section-title">Qué suele fallar en un Lenovo y cómo lo diagnosticamos</h2></div>
+  <div class="seo-text">
+   <p>Los ordenadores Lenovo, tanto sobremesa (ThinkCentre) como portátiles, comparten un número reducido de causas habituales de avería: alimentación, placa base, memoria, almacenamiento y sistema de refrigeración. Un equipo que no enciende no siempre indica el mismo problema que uno que enciende pero no llega a arrancar, así que no partimos de suposiciones — el diagnóstico revisa el equipo de forma completa antes de decir qué le ocurre.</p>
+   <p>Cuando hay información importante guardada en el equipo, lo tenemos en cuenta desde el primer momento: un ordenador que no enciende no significa necesariamente que los datos estén perdidos, y evitamos intervenciones que puedan poner en riesgo archivos que todavía se pueden recuperar.</p>
+   <p>El diagnóstico es gratuito y sin compromiso: revisamos tu Lenovo, te explicamos con claridad qué le pasa y tú decides si sigues adelante con la reparación.</p>
+  </div>
+ </div>
+</section>
+
 <section class="faq">
  <div class="wrap">
   <div class="section-head"><div class="kicker">Preguntas reales</div><h2 class="section-title">Lo que normalmente quieres saber antes de dejar el equipo.</h2></div>
@@ -400,6 +415,7 @@ footer{background:#111;color:#fff;padding:34px 0}
     width: 64px !important;
     height: 64px !important;
     border-radius: 50% !important;
+    border: 1px solid #fff !important;
     box-shadow: 0 4px 20px rgba(0, 74, 173, 0.4) !important;
     transition: transform 0.3s ease, box-shadow 0.3s ease !important;
     flex-shrink: 0 !important;
@@ -531,6 +547,49 @@ form.addEventListener('submit',async(e)=>{
  "areaServed":"Madrid",
  "sameAs":["https://maps.app.goo.gl/jhFVft6AcvbF5AAf7","https://www.youtube.com/channel/UCaxAqLD9Mk5gvzqoDedlWSA"]
 }
+</script>
+<div id="cookie-banner" class="cookie-banner" hidden>
+  <p>Utilizamos cookies y tecnologías similares propias y de terceros, de sesión o persistentes, para hacer funcionar de manera segura nuestra página web y personalizar su contenido. Igualmente, utilizamos cookies para medir y obtener datos de la navegación que realizas y para ajustar la publicidad a tus gustos y preferencias. Puedes aceptar el uso de cookies a continuación.</p>
+  <div class="cookie-actions">
+    <button type="button" class="cookie-btn" id="cookie-accept">Aceptar</button>
+    <button type="button" class="cookie-btn" id="cookie-reject">Rechazar</button>
+    <a class="cookie-btn cookie-link" href="https://kelatos.com/privacy-policy/" target="_blank" rel="noopener">Política de privacidad</a>
+  </div>
+  <button type="button" class="cookie-close" id="cookie-close" aria-label="Cerrar">&times;</button>
+</div>
+<style>
+.cookie-banner{position:fixed;left:0;right:0;bottom:0;z-index:99999;background:#22262f;color:#fff;padding:20px 56px 20px 20px;flex-wrap:wrap;align-items:center;justify-content:center;gap:16px;text-align:center;box-shadow:0 -8px 30px rgba(0,0,0,.25);font-family:Arial,Helvetica,sans-serif}
+.cookie-banner:not([hidden]){display:flex}
+.cookie-banner p{margin:0;max-width:900px;font-size:13.5px;line-height:1.5;flex:1 1 500px;color:#fff}
+.cookie-actions{display:flex;flex-wrap:wrap;gap:10px;justify-content:center;flex:0 0 auto}
+.cookie-btn{display:inline-block;border:0;background:#1fb6ad;color:#fff!important;font-weight:700;font-size:13.5px;padding:10px 18px;border-radius:6px;cursor:pointer;text-decoration:none;white-space:nowrap}
+.cookie-btn:hover{background:#189d95}
+.cookie-close{position:absolute;top:10px;right:14px;background:transparent;border:0;color:#aab0bb;font-size:22px;line-height:1;cursor:pointer;padding:6px 8px}
+.cookie-close:hover{color:#fff}
+@media(max-width:700px){
+  .cookie-banner{padding:18px 40px 18px 16px;text-align:left}
+  .cookie-banner p{font-size:12.5px}
+  .cookie-actions{flex-direction:column;align-items:stretch;width:100%}
+  .cookie-btn{width:100%;text-align:center;padding:12px 16px}
+}
+</style>
+<script>
+(function(){
+  var KEY='kelatos_cookie_consent';
+  var banner=document.getElementById('cookie-banner');
+  if(!banner) return;
+  var already=false;
+  try{ already=!!localStorage.getItem(KEY); }catch(e){}
+  if(already){ banner.hidden=true; return; }
+  banner.hidden=false;
+  function setConsent(value){
+    try{ localStorage.setItem(KEY,value); }catch(e){}
+    banner.hidden=true;
+  }
+  var a=document.getElementById('cookie-accept'); if(a) a.addEventListener('click',function(){setConsent('accepted')});
+  var r=document.getElementById('cookie-reject'); if(r) r.addEventListener('click',function(){setConsent('rejected')});
+  var c=document.getElementById('cookie-close'); if(c) c.addEventListener('click',function(){setConsent('dismissed')});
+})();
 </script>
 </body>
 </html>
