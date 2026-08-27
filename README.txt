@@ -58,3 +58,23 @@ REVISIÓN ADICIONAL (esta pasada):
   funciona. Nosotros nos encargamos de repararlo." Tamaño del H1
   aumentado ligeramente: clamp(42-68px) → clamp(46-74px) en
   escritorio, 43px → 48px en móvil.
+
+REVISIÓN ADICIONAL — 2 BUGS REALES (a petición del cliente, "se ve mal
+en móvil"):
+- El panel #mobileMenu no usaba ningún estilo real: era un div con
+  solo padding/background inline, sin borde ni bloques por enlace, así
+  que al abrirlo los enlaces aparecían como texto plano separado por
+  "·" en dos líneas irregulares (justo lo que se veía en la captura).
+  Reescrito con la clase .mobile-menu estándar de la familia (enlaces
+  en bloque, con separador entre ellos), y añadido también el
+  teléfono al final del panel.
+- El icono del chat n8n aparecía flotando a media página, no encima
+  del botón de WhatsApp: los selectores CSS (.chat-window-toggle,
+  .chat-window-wrapper) no estaban delimitados a #n8n-chat ni tenían
+  el fallback [class*="..."] (mismo problema encontrado en el
+  proyecto Next.js "fixyourpc"), así que probablemente no coincidían
+  con las clases reales que pinta el widget y este caía en su
+  posicionamiento por defecto. Reescrito con el patrón robusto de la
+  familia (#n8n-chat + [class*="..."]) y bottom recalculado para que
+  quede justo encima de .float-wa (bottom:100px escritorio, 94px
+  móvil, frente a los 22px de WhatsApp).
