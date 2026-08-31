@@ -78,3 +78,26 @@ en móvil"):
   familia (#n8n-chat + [class*="..."]) y bottom recalculado para que
   quede justo encima de .float-wa (bottom:100px escritorio, 94px
   móvil, frente a los 22px de WhatsApp).
+
+REVISIÓN ADICIONAL (checklist unificado de la familia, a petición del cliente):
+- H1 repetía la plantilla "no funciona" usada en varios repos.
+  Reescrito con síntoma específico y estructura distinta: "Tu Lenovo
+  se bloquea o no arranca. Lo solucionamos." (9 palabras).
+- BUG REAL — dos textos decorativos gigantes sin reducción de tamaño
+  en móvil/tablet: ".problems:after" ("LENOVO", 180px) y
+  ".data-art:before" ("DATOS", 115px). Añadida reducción en tablet
+  (100px/75px) y móvil (56px/46px). El de "THINKCENTRE" ya se
+  ocultaba en móvil, no se ha tocado.
+- BUG REAL — ninguno de los dos botones CTA del hero (WhatsApp ni
+  teléfono) tenía icono. Añadidos ambos (verificado con cuidado el
+  cierre de las etiquetas </a>, tras el fallo detectado en TechMac).
+- BUG REAL — el formulario no tenía ninguna casilla de consentimiento
+  de política de privacidad. Añadida, con enlace a
+  https://kelatos.com/privacy-policy/ en azul y subrayado.
+- Añadida franja de aviso de servicio técnico independiente debajo
+  del menú (no existía).
+- Añadido "Sábados, domingos y días festivos estamos cerrados" debajo
+  del horario.
+- Verificado: schema.org ya usaba correctamente el teléfono de la
+  caja de información; formulario correctamente conectado a
+  /api/contacto.
