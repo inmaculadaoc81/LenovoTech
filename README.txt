@@ -1,5 +1,30 @@
 LENOVOTECH / THINKCENTRE — DESPLIEGUE EN VERCEL
 
+REVISIÓN ADICIONAL (checklist unificado de la familia, a petición del cliente — repo 3/48):
+- BUG REAL — enlace de Cal.com desactualizado. Actualizado a
+  https://cal.com/kelatos/30min?embed=true&theme=light&attendeePhoneNumber=%2B34&overlayCalendar=true.
+- Verificado: el correo soporte@kelatos.com no aparece visible.
+- BUG REAL — el mensaje prellenado de WhatsApp decía "¡Hola Kelatos!".
+  Corregido a "¡Hola LenovoTech!" en el CTA del hero y en el botón
+  flotante. (Los mensajes de bienvenida del chatbot n8n, "¡Hola! 👋
+  Soy Fátima...", no se han tocado: no son el mensaje de WhatsApp, son
+  el saludo inicial del propio chat.)
+- BUG REAL — confirmado el bug que describió el cliente: el menú móvil
+  (#mobileMenu, con atributo hidden) no tenía ningún listener que lo
+  cerrara al pulsar un enlace, así que se quedaba abierto tras
+  navegar. Añadido un script que oculta el menú al hacer clic en
+  cualquiera de sus enlaces.
+- Verificado: los dos únicos iconos con width/height fijos en el hero
+  (22x22 sobre viewBox 32x32, y 20x20 sobre viewBox 24x24) son
+  cuadrados en ambos casos, sin deformación.
+- Verificado: el H1 en móvil ya está en 48px.
+- BUG REAL — botones del hero (.cta) con border-radius de solo 15px y
+  sin oscurecimiento en hover (solo tenían un efecto de elevación
+  translateY). Aumentado a border-radius:999px; añadido
+  filter:brightness(.88) en whatsapp/pickup y fondo negro sólido en
+  el botón de teléfono al pasar el ratón, manteniendo el efecto de
+  elevación ya existente.
+
 Dominio:
 https://thinkcentre.es/
 
