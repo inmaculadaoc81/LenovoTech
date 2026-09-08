@@ -137,3 +137,11 @@ REVISIÓN ADICIONAL (nueva regla de menú móvil, a petición del cliente):
   requería cambios.
 - Verificado de nuevo: el checklist de 7 puntos de la familia ya
   estaba aplicado de una pasada anterior; no requería cambios.
+
+SITEMAP Y ROBOTS.TXT (a petición del cliente, dominio confirmado en vivo):
+- BUG REAL — no existía ni sitemap.xml ni robots.txt en todo el
+  repositorio (por eso https://thinkcentre.es/sitemap.xml devolvía
+  404 NOT_FOUND, aunque la home funcionaba bien). El resto del código
+  (canonical, og:url, JSON-LD) ya usaba correctamente
+  https://thinkcentre.es/, así que solo faltaban estos dos ficheros.
+  Creados ambos.
