@@ -84,6 +84,15 @@ module.exports = async function handler(req, res) {
   }
   body = body || {};
 
+  if (String(body.website || '').trim()) {
+    res.status(200).json({ ok: true });
+    return;
+  }
+  if (!body.ts || Date.now() - Number(body.ts) < 2000) {
+    res.status(200).json({ ok: true });
+    return;
+  }
+
   const nombre = String(body.nombre || '').trim();
   const telefono = String(body.telefono || '').trim();
   const email = String(body.email || '').trim();
